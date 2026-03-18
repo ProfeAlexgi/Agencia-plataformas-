@@ -20,7 +20,19 @@ public class Cliente {
     public String getTelefono(){return telefono;}
     public String getCedula(){return cedula;}
      
-     
+    public void cambiarTelefono(String nuevoTelefono) {
+        this.telefono = nuevoTelefono;
+        System.out.println("El teléfono de " + nombre + " ha sido actualizado.");
+    }
+
+    public boolean tieneDatosDeContacto() {
+        if (telefono.equals("") || correo.equals("")) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public String getNombreCompleto() {
         return nombre + " " + apellido;
     }
@@ -29,3 +41,6 @@ public class Cliente {
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Telefono: " + telefono);
     }
+
+    
+}
