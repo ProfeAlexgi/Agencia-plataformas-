@@ -39,6 +39,13 @@ public class Reserva {
         return precioTotal;
     }
 
+    public void mostrarCliente() {
+        System.out.println("--- Cliente ---");
+        if (cliente != null) {
+            System.out.println("Cliente: " + cliente);
+        }
+    }
+
     public void mostrarInfo() {
         System.out.println("--- Reserva ----");
         if (cliente != null) {
