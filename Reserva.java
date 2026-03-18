@@ -1,5 +1,5 @@
 public class Reserva{
-    //JUAN PABLO HOYOS
+
     int id;
     String usuario;
     String vuelo;
@@ -18,6 +18,5 @@ public class Reserva{
         System.out.println("Vuelo: " + vuelo);
         System.out.println("Hotel: " + hotel);
     }
-    // JUAN P H 
 
 }
