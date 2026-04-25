@@ -1,9 +1,9 @@
 public class Reserva{
 
-    int id;
-    String usuario;
-    String vuelo;
-    String hotel;
+    int id 44513047;
+    String usuario miguel;
+    String vuelo ee.uu;
+    String hotel california;
 
     void crear(int id, String usuario, String vuelo, String hotel) {
         this.id = id;
@@ -20,8 +20,10 @@ public class Reserva{
     }
      public void imprimirResumen() {
         System.out.println("\n============================");
-        System.out.println("      DETALLE DE RESERVA     ");
-        System.out.println("============================");
+        System.out.println("      DETALLE                 ");
+         System.out.println("        DE                  ");
+          System.out.println("   LA RESERVA  =            ");
+        System.out.println("=============================");
 
 
     }
