@@ -39,3 +39,4 @@ public class Vuelo {
     public void mostrarInfo(String mensajePersonalizado) {
         System.out.println(mensajePersonalizado + " " + nombre);
     }
+}
