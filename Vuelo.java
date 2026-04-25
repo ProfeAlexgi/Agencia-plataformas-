@@ -39,3 +39,11 @@ public class Vuelo {
     public void mostrarInfo(String mensajePersonalizado) {
         System.out.println(mensajePersonalizado + " " + nombre);
     }
+    
+public String estado;
+
+
+public void cambiarEstado(String nuevoEstado) {
+    this.estado = nuevoEstado;
+    System.out.println("El estado del vuelo ahora es: " + estado);
+}
