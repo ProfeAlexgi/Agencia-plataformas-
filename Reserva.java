@@ -1,4 +1,4 @@
-public class Reserva{
+public class Reserva {
 
     int id;
     String usuario;
@@ -12,18 +12,27 @@ public class Reserva{
         this.hotel = hotel;
     }
 
-        public void mostrarReserva() {
+    public void mostrarReserva() {
         System.out.println("ID: " + id);
         System.out.println("Usuario: " + usuario);
         System.out.println("Vuelo: " + vuelo);
         System.out.println("Hotel: " + hotel);
     }
-     public void imprimirResumen() {
+
+    public void imprimirResumen() {
         System.out.println("\n============================");
         System.out.println("      DETALLE DE RESERVA     ");
         System.out.println("============================");
-
-
+        System.out.println("ID de Reserva : " + id);
+        System.out.println("Usuario       : " + usuario);
+        System.out.println("Vuelo         : " + vuelo);
+        System.out.println("Hotel         : " + hotel);
+        System.out.println("============================\n");
     }
 
+    public static void main(String[] args) {
+        Reserva reserva = new Reserva();
+        reserva.crear(1, "Carlos", "AV123", "Hotel Danniels");
+        reserva.imprimirResumen();
+    }
 }
