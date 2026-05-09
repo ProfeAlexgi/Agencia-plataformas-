@@ -17,7 +17,10 @@ public class Cliente {
     public String getApellido(){return apellido;}
     public String getTelefono(){return telefono;}
     public String getCedula(){return cedula;}
-     
+    public String setNombre(String Nombre){this.nombre=nombre;}
+    public String setApellido(String Apellido){this.apellido=apellido;}
+    public String setTelefono(String Telefono){this.telefono=telefono;}
+    public String setCedula(String Cedula){this.cedula=cedula;}
      
     public String getNombreCompleto() {
         return nombre + " " + apellido;
@@ -31,7 +34,8 @@ public class Cliente {
 
         System.out.println("El cliente ha sido registrado exitosamente");    
     }
-    public void MostrarInformacion() {System.out.println(Informacion del clliente \n};
-     {System.out.println(nombre+""+apellido""+correo)};
-
+    public void MostrarInformacion() {System.out.println(Informacion del clliente \n)};
+     {System.out.println(nombre+""+apellido""+correo)}};
+   
+    
  
