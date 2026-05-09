@@ -5,14 +5,16 @@ public class Hotel{
     protected String telefono_hotel;
     protected String correo_hotel;
     String numero_habitaciones;
+    private int estrellas_hotel;
     
     
-    public Hotel(String hotelNombre, String hotelDireccion, String hotelTelefono, String hotelCorreo, String habitacionesnum ) {
+    public Hotel(String hotelNombre, String hotelDireccion, String hotelTelefono, String hotelCorreo, String habitacionesnum, int estrellasHotel) {
         this.nombre_hotel = hotelNombre;
         this.direccion_hotel = hotelDireccion;
         this.telefono_hotel = hotelTelefono;
         this.correo_hotel = hotelCorreo;
         this.numero_habitaciones = habitacionesnum;
+        this.estrellas_hotel = estrellasHotel;
     }
 
     public String getNombreHotel(){return nombre_hotel;}
@@ -33,6 +35,14 @@ public class Hotel{
     public void mostrarInfo() {
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Informacion hotel: " + getInfo());
+    }
+
+    public int getEstrellasHotel(){
+        return this.estrellas_hotel;
+    }
+
+    public void setEstrellasHotel(int estrellas){
+        this.estrellas_hotel = estrellas;
     }
 
 
