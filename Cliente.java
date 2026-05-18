@@ -4,19 +4,25 @@ public class Cliente {
     protected String apellido;
     protected String telefono;
     protected String cedula;
+    protected String correo;
     
     
-    public Cliente(String nombre, String apellido, String telefono,String cedula ) {
+    public Cliente(String nombre, String apellido, String telefono,String cedula, String correo ) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.telefono = telefono;
         this.cedula=cedula;
+        this.telefono = telefono;
+        this.correo = correo;
+
+
+        
     }
 
     public String getNombre(){return nombre;}
     public String getApellido(){return apellido;}
     public String getTelefono(){return telefono;}
     public String getCedula(){return cedula;}
+    public String getcorreo(){return correo;}
      
      
     public String getNombreCompleto() {
@@ -27,11 +33,14 @@ public class Cliente {
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Telefono: " + telefono);
     }
-    public RegistraCliente(){
+    public void RegistraCliente(){
 
         System.out.println("El cliente ha sido registrado exitosamente");    
     }
-    public void MostrarInformacion() {System.out.println(Informacion del clliente \n};
-     {System.out.println(nombre+""+apellido""+correo)};
+    public void MostrarInformacion() {
+        System.out.println("Informacion del clliente \n");
+     System.out.println(this.nombre+" "+this.apellido+" "+this.correo);
+    };
+}
 
  
