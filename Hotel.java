@@ -34,6 +34,29 @@ public class Hotel{
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Informacion hotel: " + getInfo());
     }
+    public boolean verificarDisponibilidad(int numeroHabitacionesRequeridas) {
+    try {
+        int habitacionesDisponibles = Integer.parseInt(numero_habitaciones);
+        
+        if (numeroHabitacionesRequeridas <= 0) {
+            System.out.println("Número de habitaciones inválido");
+            return false;
+        }
+        
+        if (numeroHabitacionesRequeridas <= habitacionesDisponibles) {
+            System.out.println("Hotel disponible. Habitaciones libres: " + 
+                             (habitacionesDisponibles - numeroHabitacionesRequeridas));
+            return true;
+        } else {
+            System.out.println("Hotel sin disponibilidad. Solo quedan: " + 
+                             habitacionesDisponibles);
+            return false;
+        }
+    } catch (NumberFormatException e) {
+        System.out.println("Error: número de habitaciones inválido en la base de datos puestos");
+        return false;
+    }
+}
 
 
 }
