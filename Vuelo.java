@@ -1,12 +1,12 @@
 public class Vuelo {
 
     public String nombre;
-    public int telefono;
+    public String telefono;
     public int hora;
     public String ubicacion;
     public String servicios;
 
-    public Vuelo(String nombre, int telefono, int hora, String ubicacion, String servicios) {
+    public Vuelo(String nombre, String telefono, int hora, String ubicacion, String servicios) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.hora = hora;
@@ -18,7 +18,7 @@ public class Vuelo {
         return nombre; 
     }
 
-    public int getTelefono() { 
+    public String getTelefono() { 
         return telefono; 
     }
 
@@ -52,7 +52,7 @@ public class Vuelo {
     }
 
     public static void main(String[] args) {
-        Vuelo vuelo = new Vuelo("HPMYADMIN", 320200342, 10, "medellin", "Se ofrece un incrible bufet que va incluido en la compra del vuelo");
+        Vuelo vuelo = new Vuelo("HPMYADMIN", "320200342", 10, "medellin", "Se ofrece un incrible bufet que va incluido en la compra del vuelo");
         
         vuelo.cambiarhora(10);
         vuelo.mostrarInfo();
