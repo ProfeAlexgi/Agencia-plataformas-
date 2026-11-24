@@ -1,12 +1,12 @@
 public class Vuelo {
 
-    public String nombre;
-    public int telefono;
-    public int hora;
-    public String ubicacion;
-    public String servicios;
+    private String nombre;
+    private String telefono;
+    private int hora;
+    private String ubicacion;
+    private String servicios;
 
-    public Vuelo(String nombre, int telefono, int hora, String ubicacion, String servicios) {
+    public Vuelo(String nombre, String telefono, int hora, String ubicacion, String servicios) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.hora = hora;
@@ -14,48 +14,28 @@ public class Vuelo {
         this.servicios = servicios;
     }
 
-    public String getNombre() { 
-        return nombre; 
+    public String getNombre() { return nombre; }
+    public String getTelefono() { return telefono; }
+    public int getHora() { return hora; }
+    public String getUbicacion() { return ubicacion; }
+    public String getServicios() { return servicios; }
+
+    public void cambiarHora(int nuevaHora) {
+        if (nuevaHora < 0 || nuevaHora > 23) {
+            System.out.println("Hora invalida: debe estar entre 0 y 23");
+            return;
+        }
+        this.hora = nuevaHora;
     }
 
-    public int getTelefono() { 
-        return telefono; 
-    }
-
-    public int getHora() {
-        return hora; 
-    }
-
-    public String getUbicacion() { 
-        return ubicacion; 
+    public void agregarServicio(String servicio) {
+        this.servicios = this.servicios + ", " + servicio;
     }
 
     public void mostrarInfo() {
-        System.out.println("--- DETALLE COMPLETO ---");
-        System.out.println("Nombre: " + nombre);
+        System.out.println("Vuelo: " + nombre);
         System.out.println("Ubicacion: " + ubicacion);
-        System.out.println("Hora: " + hora);
+        System.out.println("Hora: " + hora + ":00");
         System.out.println("Telefono: " + telefono);
-        System.out.println("Servicios: " + servicios);
-    }
-
-    public void cambiarhora(int nueva_hora){
-        this.hora = nueva_hora;
-    }
-
-    public void modificarservicio(String agregar_servicio){
-        this.servicios = agregar_servicio;
-    }
-
-    public void mostrarInfo(String mensajePersonalizado) {
-        System.out.println(mensajePersonalizado + " " + nombre);
-    }
-
-    public static void main(String[] args) {
-        Vuelo vuelo = new Vuelo("HPMYADMIN", 320200342, 10, "medellin", "Se ofrece un incrible bufet que va incluido en la compra del vuelo");
-        
-        vuelo.cambiarhora(10);
-        vuelo.mostrarInfo();
-        vuelo.modificarservicio("Se ofrece un asiento exclusivo para todos los que an estado en nuestra aerolinea durante mas de 10 años");
-    }
+        System.out.println("Servicios: " + servicios);    }
 }
