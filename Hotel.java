@@ -5,6 +5,7 @@ public class Hotel{
     protected String telefono_hotel;
     protected String correo_hotel;
     String numero_habitaciones;
+    protected int estrellas;
     
     
     public Hotel(String hotelNombre, String hotelDireccion, String hotelTelefono, String hotelCorreo, String habitacionesnum ) {
@@ -33,6 +34,14 @@ public class Hotel{
     public void mostrarInfo() {
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Informacion hotel: " + getInfo());
+    }
+
+    public int getEstrellas() {
+        return estrellas;
+    }
+
+    public void setEstrellas(int estrellas) {
+        this.estrellas = estrellas;
     }
 
 
