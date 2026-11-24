@@ -1,29 +1,30 @@
-public class Reserva{
+public class Reserva {
 
-    int id;
-    String usuario;
-    String vuelo;
-    String hotel;
+    private int id;
+    private Cliente cliente;
+    private Vuelo vuelo;
+    private Hotel hotel;
 
-    void crear(int id, String usuario, String vuelo, String hotel) {
+    public Reserva(int id, Cliente cliente, Vuelo vuelo, Hotel hotel) {
         this.id = id;
-        this.usuario = usuario;
+        this.cliente = cliente;
         this.vuelo = vuelo;
         this.hotel = hotel;
     }
 
-        public void mostrarReserva() {
+    public int getId() { return id; }
+
+    public void mostrarReserva() {
         System.out.println("ID: " + id);
-        System.out.println("Usuario: " + usuario);
-        System.out.println("Vuelo: " + vuelo);
-        System.out.println("Hotel: " + hotel);
+        cliente.mostrarInfo();
+        vuelo.mostrarInfo();
+        hotel.mostrarInfo();
     }
-     public void imprimirResumen() {
+
+    public void imprimirResumen() {
         System.out.println("\n============================");
         System.out.println("      DETALLE DE RESERVA     ");
         System.out.println("============================");
-
-
+        mostrarReserva();
     }
-
 }
